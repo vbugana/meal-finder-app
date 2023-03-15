@@ -68,7 +68,6 @@ function getRandomMeal() {
     .then((res) => res.json())
     .then((data) => {
       const meal = data.meals[0];
-
       addMealToDOM(meal);
     });
 }
@@ -120,7 +119,7 @@ mealsEl.addEventListener('click', (e) => {
   });
 
   if (mealInfo) {
-    const mealID = mealInfo.getAttribute('data-mealid');
+    const mealID = mealInfo.getAttribute('data-mealID');
     getMealById(mealID);
   }
 });

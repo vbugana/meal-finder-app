@@ -10,6 +10,21 @@ Search and generate random meals from the [themealdb.com](www.themealdb.com) API
 - Click on meal and see the details
 - Click on generate button and fetch & display a random meal
 
+## Description
+
+This is a JavaScript code that fetches meal data from an API and displays it on a webpage.
+
+The code defines several constants and event listeners. The `search`, `submit`, `random`, `mealsEl`, `resultHeading`, and `single_mealEl` constants are used to reference various elements on the webpage.
+
+The `searchMeal` function is used to search for meals based on a user-entered search term. It prevents the default form submission behavior, clears the `single_mealEl` element, and fetches meal data from an API based on the search term. The fetched meal data is then displayed on the webpage if any matches are found.
+
+The `getMealById` function is used to fetch meal data based on a meal ID. It clears the mealsEl and resultHeading elements, fetches meal data from an API based on the ID, and displays the fetched meal data on the webpage.
+
+The `getRandomMeal` function is used to fetch a random meal from the API. It clears the mealsEl and resultHeading elements, fetches a random meal from the API, and displays the fetched meal data on the webpage.
+
+The `addMealToDOM` function is used to add a meal to the `single_mealEl` element. It extracts information about the meal's name, image, category, area, instructions, and ingredients from the fetched meal data and formats it in HTML to be displayed on the webpage.
+
+Finally, there are several event listeners that listen for user interactions with the webpage. The submit event listener listens for form submissions to trigger the `searchMeal` function. The random event listener listens for clicks on the "Random" button to trigger the `getRandomMeal` function. The `mealsEl` event listener listens for clicks on meal items to trigger the `getMealById` function with the clicked meal's ID.
 
 ## Technologies used
 
